@@ -1,7 +1,7 @@
-public class Day01Star1 {
+public class Day01Star2 {
     private String input;
 
-    public Day01Star1(String input){
+    public Day01Star2(String input){
         this.input = input;
     }
 
@@ -15,16 +15,21 @@ public class Day01Star1 {
             } else if (a == ')') {
                 random_value--;
             }
+
+
+            if(random_value == -1){
+                return (i+1);
+            }
         }
 
-        return random_value;
+        return 0;
     }
 
     public static void main(String[] args) {
 
-        String input ="(()(()(";
+        String input ="()())";
 
-        Day01Star1 firstAttempt =new  Day01Star1(input);
+        Day01Star2 firstAttempt =new  Day01Star2(input);
 
         System.out.println(firstAttempt.part1());
     }
